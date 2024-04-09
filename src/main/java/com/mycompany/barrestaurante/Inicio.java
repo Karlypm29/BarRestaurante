@@ -6,6 +6,13 @@ package com.mycompany.barrestaurante;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import javax.swing.JPanel;
+import vistas.*;
 
 /**
  *
@@ -18,8 +25,42 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        InitStyles();
+        SetDate();
+        InitContent();
     }
-
+    
+    private void InitStyles() {
+        mensaje.putClientProperty("FlatLaf.style", "font: 14 $light.font");
+        mensaje.setForeground(Color.black);
+        navText.putClientProperty("FlatLaf.style", "font: bold $h3.regular.font");
+        navText.setForeground(Color.white);
+        fecha.putClientProperty("FlatLaf.style", "font: 24 $light.font");
+        fecha.setForeground(Color.white);
+        Nombre.putClientProperty("FlatLaf.style", "font: bold $h1.regular.font");
+        Nombre.setForeground(Color.white);
+    }
+    
+    
+    private void SetDate() {
+        LocalDate now = LocalDate.now();
+        Locale spanishLocale = new Locale("es", "ES");
+        fecha.setText(now.format(DateTimeFormatter.ofPattern("'Hoy es' EEEE dd 'de' MMMM 'de' yyyy", spanishLocale)));
+    }
+    
+    private void InitContent() {
+        ShowJPanel(new Principal());
+    }
+    
+    public static void ShowJPanel(JPanel p) {
+        p.setSize(750, 430);
+        p.setLocation(0,0);
+        
+        content.removeAll();
+        content.add(p, BorderLayout.CENTER);
+        content.revalidate();
+        content.repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,90 +70,279 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jFondo = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        background = new javax.swing.JPanel();
+        menu = new javax.swing.JPanel();
+        Nombre = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        btn_prin = new javax.swing.JButton();
+        btn_lends = new javax.swing.JButton();
+        btn_returns = new javax.swing.JButton();
+        btn_users = new javax.swing.JButton();
+        btn_books = new javax.swing.JButton();
+        btn_reports = new javax.swing.JButton();
+        header = new javax.swing.JPanel();
+        navText = new javax.swing.JLabel();
+        fecha = new javax.swing.JLabel();
+        content = new javax.swing.JPanel();
+        mensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1050, 660));
 
-        jFondo.setBackground(new java.awt.Color(255, 255, 255));
+        background.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(0, 51, 255));
-        jPanel1.setForeground(new java.awt.Color(51, 51, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(270, 640));
+        menu.setBackground(new java.awt.Color(13, 71, 161));
+        menu.setPreferredSize(new java.awt.Dimension(270, 640));
 
-        jButton1.setText("jButton1");
+        Nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Nombre.setText("Menu");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
+        jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
+
+        btn_prin.setBackground(new java.awt.Color(21, 101, 192));
+        btn_prin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_prin.setForeground(new java.awt.Color(255, 255, 255));
+        btn_prin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
+        btn_prin.setText("Principal");
+        btn_prin.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_prin.setBorderPainted(false);
+        btn_prin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_prin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_prin.setIconTextGap(13);
+        btn_prin.setInheritsPopupMenu(true);
+        btn_prin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_prinActionPerformed(evt);
+            }
+        });
+
+        btn_lends.setBackground(new java.awt.Color(21, 101, 192));
+        btn_lends.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_lends.setForeground(new java.awt.Color(255, 255, 255));
+        btn_lends.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar-plus.png"))); // NOI18N
+        btn_lends.setText("Factura");
+        btn_lends.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_lends.setBorderPainted(false);
+        btn_lends.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_lends.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_lends.setIconTextGap(13);
+        btn_lends.setInheritsPopupMenu(true);
+        btn_lends.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_lendsActionPerformed(evt);
+            }
+        });
+
+        btn_returns.setBackground(new java.awt.Color(21, 101, 192));
+        btn_returns.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_returns.setForeground(new java.awt.Color(255, 255, 255));
+        btn_returns.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar-multiple-check.png"))); // NOI18N
+        btn_returns.setText("Factura Modificar");
+        btn_returns.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_returns.setBorderPainted(false);
+        btn_returns.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_returns.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_returns.setIconTextGap(13);
+        btn_returns.setInheritsPopupMenu(true);
+        btn_returns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_returnsActionPerformed(evt);
+            }
+        });
+
+        btn_users.setBackground(new java.awt.Color(21, 101, 192));
+        btn_users.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_users.setForeground(new java.awt.Color(255, 255, 255));
+        btn_users.setIcon(new javax.swing.ImageIcon(getClass().getResource("/account-multiple.png"))); // NOI18N
+        btn_users.setText("Usuarios");
+        btn_users.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_users.setBorderPainted(false);
+        btn_users.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_users.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_users.setIconTextGap(13);
+        btn_users.setInheritsPopupMenu(true);
+        btn_users.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_usersActionPerformed(evt);
+            }
+        });
+
+        btn_books.setBackground(new java.awt.Color(21, 101, 192));
+        btn_books.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_books.setForeground(new java.awt.Color(255, 255, 255));
+        btn_books.setIcon(new javax.swing.ImageIcon(getClass().getResource("/book-open-page-variant.png"))); // NOI18N
+        btn_books.setText("Comidas");
+        btn_books.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_books.setBorderPainted(false);
+        btn_books.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_books.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_books.setIconTextGap(13);
+        btn_books.setInheritsPopupMenu(true);
+        btn_books.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_booksActionPerformed(evt);
+            }
+        });
+
+        btn_reports.setBackground(new java.awt.Color(21, 101, 192));
+        btn_reports.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_reports.setForeground(new java.awt.Color(255, 255, 255));
+        btn_reports.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file-chart.png"))); // NOI18N
+        btn_reports.setText("Reportes");
+        btn_reports.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
+        btn_reports.setBorderPainted(false);
+        btn_reports.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btn_reports.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_reports.setIconTextGap(13);
+        btn_reports.setInheritsPopupMenu(true);
+        btn_reports.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_reportsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
+        menu.setLayout(menuLayout);
+        menuLayout.setHorizontalGroup(
+            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(menuLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(btn_lends, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_users, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_prin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_returns, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+            .addComponent(btn_books, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(btn_reports, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(246, 246, 246)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(303, Short.MAX_VALUE))
+        menuLayout.setVerticalGroup(
+            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btn_lends, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(btn_users, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_prin, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(btn_returns, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(btn_books, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(menuLayout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(btn_reports, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
-        jTextField1.setText("jTextField1");
+        header.setBackground(new java.awt.Color(25, 118, 210));
+        header.setPreferredSize(new java.awt.Dimension(744, 150));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(169, Short.MAX_VALUE))
+        navText.setText("Bar Restaurante los Dragones");
+
+        fecha.setText("Hoy es {dayname} {day} de {month} de {year}");
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(navText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fecha, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(navText, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jFondoLayout = new javax.swing.GroupLayout(jFondo);
-        jFondo.setLayout(jFondoLayout);
-        jFondoLayout.setHorizontalGroup(
-            jFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFondoLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setLayout(new java.awt.BorderLayout());
+
+        mensaje.setText("Bienvenidos ♥");
+
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(header, javax.swing.GroupLayout.DEFAULT_SIZE, 763, Short.MAX_VALUE)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
-        jFondoLayout.setVerticalGroup(
-            jFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jFondoLayout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menu, javax.swing.GroupLayout.DEFAULT_SIZE, 642, Short.MAX_VALUE)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(mensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jFondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_prinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_prinActionPerformed
+        ShowJPanel(new Principal());
+    }//GEN-LAST:event_btn_prinActionPerformed
+
+    private void btn_lendsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lendsActionPerformed
+        ShowJPanel(new Factura());
+    }//GEN-LAST:event_btn_lendsActionPerformed
+
+    private void btn_returnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_returnsActionPerformed
+        ShowJPanel(new modificarFactura());
+    }//GEN-LAST:event_btn_returnsActionPerformed
+
+    private void btn_usersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_usersActionPerformed
+        ShowJPanel(new Empleados());
+    }//GEN-LAST:event_btn_usersActionPerformed
+
+    private void btn_booksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_booksActionPerformed
+        ShowJPanel(new Comidas());
+    }//GEN-LAST:event_btn_booksActionPerformed
+
+    private void btn_reportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reportsActionPerformed
+        ShowJPanel(new Reportes());
+    }//GEN-LAST:event_btn_reportsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,10 +360,20 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jFondo;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel Nombre;
+    private javax.swing.JPanel background;
+    private javax.swing.JButton btn_books;
+    private javax.swing.JButton btn_lends;
+    private javax.swing.JButton btn_prin;
+    private javax.swing.JButton btn_reports;
+    private javax.swing.JButton btn_returns;
+    private javax.swing.JButton btn_users;
+    private static javax.swing.JPanel content;
+    private javax.swing.JLabel fecha;
+    private javax.swing.JPanel header;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel mensaje;
+    private javax.swing.JPanel menu;
+    private javax.swing.JLabel navText;
     // End of variables declaration//GEN-END:variables
 }
