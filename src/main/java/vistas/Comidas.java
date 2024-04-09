@@ -40,9 +40,11 @@ public class Comidas extends javax.swing.JPanel {
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
-        title.setText("Libros");
+        title.setText("Menu");
 
-        searchButton.setBackground(new java.awt.Color(18, 90, 173));
+        bookSearch.setSelectionColor(new java.awt.Color(169, 179, 136));
+
+        searchButton.setBackground(new java.awt.Color(95, 111, 82));
         searchButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setText("Buscar");
@@ -54,7 +56,7 @@ public class Comidas extends javax.swing.JPanel {
             }
         });
 
-        deleteButton.setBackground(new java.awt.Color(18, 90, 173));
+        deleteButton.setBackground(new java.awt.Color(95, 111, 82));
         deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(255, 255, 255));
         deleteButton.setText("Borrar");
@@ -66,7 +68,7 @@ public class Comidas extends javax.swing.JPanel {
             }
         });
 
-        editButton.setBackground(new java.awt.Color(18, 90, 173));
+        editButton.setBackground(new java.awt.Color(95, 111, 82));
         editButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         editButton.setForeground(new java.awt.Color(255, 255, 255));
         editButton.setText("Editar");
@@ -78,7 +80,7 @@ public class Comidas extends javax.swing.JPanel {
             }
         });
 
-        addButton.setBackground(new java.awt.Color(18, 90, 173));
+        addButton.setBackground(new java.awt.Color(95, 111, 82));
         addButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addButton.setForeground(new java.awt.Color(255, 255, 255));
         addButton.setText("Nuevo");
@@ -96,14 +98,14 @@ public class Comidas extends javax.swing.JPanel {
 
             },
             new String [] {
-                "ID", "Título", "Fecha de Pub.", "Autor", "Categoría", "Edición", "Idioma", "Páginas", "Descripción", "Ejemplaresl", "Stock", "Disponibles"
+                "ID", "Nombre", "Precio", "Activo"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true
+                false, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {

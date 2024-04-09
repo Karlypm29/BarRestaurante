@@ -42,7 +42,7 @@ public class Empleados extends javax.swing.JPanel {
 
         title.setText("Usuarios");
 
-        searchButton.setBackground(new java.awt.Color(18, 90, 173));
+        searchButton.setBackground(new java.awt.Color(95, 111, 82));
         searchButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setText("Buscar");
@@ -60,14 +60,14 @@ public class Empleados extends javax.swing.JPanel {
 
             },
             new String [] {
-                "ID", "Nombre", "Apellido P.", "Apellido M.", "Domicilio", "Teléfono"
+                "ID", "Nombre", "Apellido P.", "Apellido M.", "Teléfono", "Rol", "Contraseña"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true
+                false, true, true, true, true, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -86,7 +86,7 @@ public class Empleados extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        deleteButton.setBackground(new java.awt.Color(18, 90, 173));
+        deleteButton.setBackground(new java.awt.Color(95, 111, 82));
         deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(255, 255, 255));
         deleteButton.setText("Borrar");
@@ -98,7 +98,7 @@ public class Empleados extends javax.swing.JPanel {
             }
         });
 
-        editButton.setBackground(new java.awt.Color(18, 90, 173));
+        editButton.setBackground(new java.awt.Color(95, 111, 82));
         editButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         editButton.setForeground(new java.awt.Color(255, 255, 255));
         editButton.setText("Editar");
@@ -110,7 +110,7 @@ public class Empleados extends javax.swing.JPanel {
             }
         });
 
-        addButton.setBackground(new java.awt.Color(18, 90, 173));
+        addButton.setBackground(new java.awt.Color(95, 111, 82));
         addButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addButton.setForeground(new java.awt.Color(255, 255, 255));
         addButton.setText("Nuevo");
