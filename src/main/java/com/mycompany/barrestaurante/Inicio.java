@@ -137,7 +137,7 @@ public class Inicio extends javax.swing.JFrame {
         btn_returns.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_returns.setForeground(new java.awt.Color(255, 255, 255));
         btn_returns.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar-multiple-check.png"))); // NOI18N
-        btn_returns.setText("Factura Modificar");
+        btn_returns.setText("Ordenes");
         btn_returns.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
         btn_returns.setBorderPainted(false);
         btn_returns.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -171,7 +171,7 @@ public class Inicio extends javax.swing.JFrame {
         btn_books.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_books.setForeground(new java.awt.Color(255, 255, 255));
         btn_books.setIcon(new javax.swing.ImageIcon(getClass().getResource("/book-open-page-variant.png"))); // NOI18N
-        btn_books.setText("Comidas");
+        btn_books.setText("Menu");
         btn_books.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 13, 1, 1, new java.awt.Color(0, 0, 0)));
         btn_books.setBorderPainted(false);
         btn_books.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -276,7 +276,7 @@ public class Inicio extends javax.swing.JFrame {
         content.setBackground(new java.awt.Color(255, 255, 255));
         content.setLayout(new java.awt.BorderLayout());
 
-        mensaje.setText("Bienvenidos ♥");
+        mensaje.setText("Bienvenido(a)");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);

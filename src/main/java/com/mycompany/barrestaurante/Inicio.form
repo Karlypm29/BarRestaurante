@@ -233,7 +233,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/calendar-multiple-check.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Factura Modificar"/>
+                <Property name="text" type="java.lang.String" value="Ordenes"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder bottom="1" left="13" right="1" top="1"/>
@@ -297,7 +297,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/book-open-page-variant.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Comidas"/>
+                <Property name="text" type="java.lang.String" value="Menu"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder bottom="1" left="13" right="1" top="1"/>
@@ -411,7 +411,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="mensaje">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bienvenidos &#x2665;"/>
+            <Property name="text" type="java.lang.String" value="Bienvenido(a)"/>
           </Properties>
         </Component>
       </SubComponents>
