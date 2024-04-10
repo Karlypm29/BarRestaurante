@@ -87,7 +87,7 @@ public class Inicio extends javax.swing.JFrame {
         mensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(1050, 660));
+        setMinimumSize(new java.awt.Dimension(1090, 680));
 
         background.setBackground(new java.awt.Color(255, 255, 255));
 
