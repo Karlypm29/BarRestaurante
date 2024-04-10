@@ -154,8 +154,11 @@
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="MetodoPago"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Tarjeta de Credito"/>
+            <Property name="text" type="java.lang.String" value="Tarjeta de Cr&#xe9;dito"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>

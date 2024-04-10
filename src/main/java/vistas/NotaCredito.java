@@ -4,6 +4,8 @@
  */
 package vistas;
 
+import static com.mycompany.barrestaurante.Inicio.ShowJPanel;
+
 /**
  *
  * @author karly
@@ -39,7 +41,7 @@ public class NotaCredito extends javax.swing.JPanel {
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
-        title.setText("Nota de Credito");
+        title.setText("Nota de Crédito");
 
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -149,6 +151,7 @@ public class NotaCredito extends javax.swing.JPanel {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        ShowJPanel(new Factura());
     }//GEN-LAST:event_jButton6ActionPerformed
 
 

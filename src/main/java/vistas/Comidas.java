@@ -40,7 +40,7 @@ public class Comidas extends javax.swing.JPanel {
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
-        title.setText("Menu");
+        title.setText("Menú");
 
         bookSearch.setSelectionColor(new java.awt.Color(169, 179, 136));
 

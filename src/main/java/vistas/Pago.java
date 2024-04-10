@@ -64,7 +64,12 @@ public class Pago extends javax.swing.JPanel {
         jCheckBox1.setText("Efectivo");
 
         MetodoPago.add(jCheckBox2);
-        jCheckBox2.setText("Tarjeta de Credito");
+        jCheckBox2.setText("Tarjeta de Crédito");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Metodo de Pago:");
 
@@ -133,8 +138,12 @@ public class Pago extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
-        ShowJPanel(new Comidas());
+        ShowJPanel(new Factura());
     }//GEN-LAST:event_buttonActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

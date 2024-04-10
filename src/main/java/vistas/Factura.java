@@ -158,7 +158,7 @@ public class Factura extends javax.swing.JPanel {
         addButton3.setBackground(new java.awt.Color(95, 111, 82));
         addButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         addButton3.setForeground(new java.awt.Color(255, 255, 255));
-        addButton3.setText("Nota de Credito");
+        addButton3.setText("Nota de crédito");
         addButton3.setBorderPainted(false);
         addButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         addButton3.addActionListener(new java.awt.event.ActionListener() {

@@ -42,6 +42,8 @@ public class empleadoAct extends javax.swing.JPanel {
         button = new javax.swing.JButton();
         phoneLbl = new javax.swing.JLabel();
         phoneTxt = new javax.swing.JTextField();
+        phoneTxt1 = new javax.swing.JTextField();
+        phoneLbl1 = new javax.swing.JLabel();
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -77,6 +79,10 @@ public class empleadoAct extends javax.swing.JPanel {
 
         phoneTxt.setToolTipText("");
 
+        phoneTxt1.setToolTipText("");
+
+        phoneLbl1.setText("Contraseña");
+
         javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
         bg.setLayout(bgLayout);
         bgLayout.setHorizontalGroup(
@@ -110,7 +116,11 @@ public class empleadoAct extends javax.swing.JPanel {
                             .addGroup(bgLayout.createSequentialGroup()
                                 .addComponent(phoneLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(218, 218, 218))
-                            .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(phoneTxt1)
+                            .addGroup(bgLayout.createSequentialGroup()
+                                .addComponent(phoneLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(218, 218, 218)))
                         .addGap(72, 72, 72))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -144,9 +154,13 @@ public class empleadoAct extends javax.swing.JPanel {
                         .addComponent(phoneLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(phoneTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(90, 90, 90)
+                        .addGap(18, 18, 18)
+                        .addComponent(phoneLbl1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(phoneTxt1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
                         .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(108, 108, 108))
+                        .addGap(56, 56, 56))
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(26, 26, 26))))
@@ -182,7 +196,9 @@ public class empleadoAct extends javax.swing.JPanel {
     private javax.swing.JLabel nameLbl;
     private javax.swing.JTextField nameTxt;
     private javax.swing.JLabel phoneLbl;
+    private javax.swing.JLabel phoneLbl1;
     private javax.swing.JTextField phoneTxt;
+    private javax.swing.JTextField phoneTxt1;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

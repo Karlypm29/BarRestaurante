@@ -49,7 +49,7 @@ public class Inicio extends javax.swing.JFrame {
     }
     
     private void InitContent() {
-        ShowJPanel(new Principal());
+        ShowJPanel(new Login());
     }
     
     public static void ShowJPanel(JPanel p) {
